@@ -1,11 +1,11 @@
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fff0f5;
-    color: #333;
+    background-color: #f8e6f7; /* morado pastel */
+    color: #1a1a1a;
     margin: 0;
     padding: 0;
 }
+
 .container {
     max-width: 600px;
     margin: 40px auto;
@@ -14,12 +14,18 @@ body {
     border-radius: 16px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
 h1 {
-    color: #d63384;
+    color: #e60073; /* rojo rosado */
 }
+
 .post {
     margin-top: 30px;
-    background-color: #fce4ec;
+    background-color: #ffe6f0; /* rosa claro */
     padding: 15px;
     border-radius: 12px;
+}
+
+h2 {
+    color: #9900cc; /* morado fuerte */
 }
