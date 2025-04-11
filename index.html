@@ -80,11 +80,19 @@
                 <img src="images/wannaplayminecraftwithme.png" alt="0" style="max-width: 100%; margin-top: 10px; border-radius: 12px;">
                 <!--💚-->
             </div>
+
+            <div class="post">
+                <h2>11 de abril de 2025</h2>
+                <button onclick="revealLetter()" style="padding: 10px 20px; background-color: #ff88aa; color: white; border: none; border-radius: 10px; cursor: pointer;">
+                    Toca para leer algo bonito 💌
+                </button>
+                <p id="typed-text" style="margin-top: 20px; white-space: pre-line; font-family: 'Courier New', monospace; font-size: 18px;"></p>
+            </div>
         </div>
     </div>
 
     <script>
-        const passwordCorrecta = "panconquesopanquesito";
+        const passwordCorrecta = "awadelimon";
 
         function checkPassword() {
             const input = document.getElementById("passwordInput").value;
@@ -95,6 +103,27 @@
             } else {
                 error.classList.remove("hidden");
             }
+        }
+
+        function revealLetter() {
+            const text = `Cada día que te puedo ver, es una oportunidad más para entregarte cuanto puedo de mí.
+
+Hagamos esto juntos... 💖`;
+
+            let i = 0;
+            const speed = 40; // velocidad de escritura
+            const typedTextElement = document.getElementById("typed-text");
+            typedTextElement.innerHTML = "";
+
+            function typeWriter() {
+                if (i < text.length) {
+                    typedTextElement.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+
+            typeWriter();
         }
     </script>
 </body>
