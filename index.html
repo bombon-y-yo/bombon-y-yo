@@ -1,174 +1,193 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para mi Bombón 💖</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        #login-container {
-            text-align: center;
-            padding: 50px;
-            font-family: Arial, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para mi Bombón 💖</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #login-container {
+      text-align: center;
+      padding: 50px;
+      font-family: Arial, sans-serif;
+    }
 
-        .hidden {
-            display: none;
-        }
+    .hidden {
+      display: none;
+    }
 
-        input {
-            padding: 8px;
-            font-size: 16px;
-        }
+    input {
+      padding: 8px;
+      font-size: 16px;
+    }
 
-        button {
-            padding: 8px 16px;
-            font-size: 16px;
-            margin-top: 10px;
-            background-color: #ff88aa;
-            border: none;
-            color: white;
-            border-radius: 8px;
-            cursor: pointer;
-        }
+    button {
+      padding: 8px 16px;
+      font-size: 16px;
+      margin-top: 10px;
+      background-color: #ff88aa;
+      border: none;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
 
-        #error-message {
-            color: red;
-            margin-top: 10px;
-        }
+    #error-message {
+      color: red;
+      margin-top: 10px;
+    }
 
-        .post {
-            margin-top: 30px;
-            background: #fff0f5;
-            padding: 20px;
-            border-radius: 16px;
-            box-shadow: 0 4px 8px rgba(255, 136, 170, 0.2);
-        }
+    .post {
+      margin-top: 30px;
+      background: #fff0f5;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 4px 8px rgba(255, 136, 170, 0.2);
+    }
 
-        .image-pair {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 15px;
-        }
+    .image-pair {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 15px;
+    }
 
-        .image-pair img {
-            max-width: 40%;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
+    .image-pair img {
+      max-width: 40%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
 
-        .message {
-            font-style: italic;
-            margin-top: 10px;
-        }
-    </style>
+    .message {
+      font-style: italic;
+      margin-top: 10px;
+    }
+
+    #reveal-text {
+      white-space: pre-line;
+      margin-top: 15px;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Login -->
-    <div id="login-container">
-        <h2>Ingresa la contraseña 💌</h2>
-        <input type="password" id="passwordInput" placeholder="Contraseña">
-        <button onclick="checkPassword()">Entrar</button>
-        <p id="error-message" class="hidden">Contraseña incorrecta 😢</p>
-    </div>
+  <!-- Login -->
+  <div id="login-container">
+    <h2>Ingresa la contraseña 💌</h2>
+    <input type="password" id="passwordInput" placeholder="Contraseña">
+    <button onclick="checkPassword()">Entrar</button>
+    <p id="error-message" class="hidden">Contraseña incorrecta 😢</p>
+  </div>
 
-    <!-- Contenido protegido -->
-    <div id="content" class="hidden">
-        <div class="container">
-            <h1>¡Hola Bombón! 💕</h1>
-            <p>Este es un rincón que he creado solo para ti. Cada día (sin falla), vendré aquí a dejarte algo bonito. Porque te lo mereces todo y más.</p>
+  <!-- Contenido protegido -->
+  <div id="content" class="hidden">
+    <div class="container">
+      <h1>¡Hola Bombón! 💕</h1>
+      <p>Este es un rincón que he creado solo para ti. Cada día (sin falla), vendré aquí a dejarte algo bonito. Porque te lo mereces todo y más.</p>
 
-            <div class="post">
-                <h2>8 de abril de 2025</h2>
-                <p>Te pienso, y no puedo evitar cruzarme esta canción de oreja a oreja. 💘🎵</p>
-                <p><strong>🎧 <a href="https://youtu.be/XqoTEpyZisc?si=COmDTP_wSaiDs-j9" target="_blank">“You Rock My World” – Michael Jackson"</a></strong></p>
-            </div>
+      <div class="post">
+        <h2>8 de abril de 2025</h2>
+        <p>Te pienso, y no puedo evitar cruzarme esta canción de oreja a oreja. 💘🎵</p>
+        <p><strong>🎧 <a href="https://youtu.be/XqoTEpyZisc?si=COmDTP_wSaiDs-j9" target="_blank">“You Rock My World” – Michael Jackson"</a></strong></p>
+      </div>
 
-            <div class="post">
-                <h2>9 de abril de 2025</h2>
-                <p>Un poema que quedo escondido entre un viejo libro, hecho unas semanas despues de conocerte. Como pasa el tiempo. 💌</p>
-                <blockquote>
-                    <p>Quisiera cada segundo contigo, rodeándote como fuego,<br>
-                    Quisiera descifrarte, a tu ser y a tu voz,<br>
-                    Quisiera conocerte cada noche, y enamorarte cada mañana,<br>
-                    Quisiera que nos separara una distancia mínima, inexistente,<br>
-                    Quisiera que leyeras esto, preguntándote quién soy,<br>
-                    Quisiera volverme atrás solo por ti, desvistiendo las memorias,<br>
-                    Los momentos.</p>
-                </blockquote>
-            </div>
+      <div class="post">
+        <h2>9 de abril de 2025</h2>
+        <p>Un poema que quedo escondido entre un viejo libro, hecho unas semanas despues de conocerte. Como pasa el tiempo. 💌</p>
+        <blockquote>
+          <p>Quisiera cada segundo contigo, rodeándote como fuego,<br>
+          Quisiera descifrarte, a tu ser y a tu voz,<br>
+          Quisiera conocerte cada noche, y enamorarte cada mañana,<br>
+          Quisiera que nos separara una distancia mínima, inexistente,<br>
+          Quisiera que leyeras esto, preguntándote quién soy,<br>
+          Quisiera volverme atrás solo por ti, desvistiendo las memorias,<br>
+          Los momentos.</p>
+        </blockquote>
+      </div>
 
-            <div class="post">
-                <h2>10 de abril de 2025</h2>
-                <p><em>Más que mil palabras... si no entiendes revisa el código de la página.</em></p>
-                <img src="images/wannaplayminecraftwithme.png" alt="0" style="max-width: 100%; margin-top: 10px; border-radius: 12px;">
-                <!--💚-->
-            </div>
+      <div class="post">
+        <h2>10 de abril de 2025</h2>
+        <button onclick="revealText()">Haz clic para leer 💚</button>
+        <p id="reveal-text" class="hidden"></p>
+        <img src="images/wannaplayminecraftwithme.png" alt="0" style="max-width: 100%; margin-top: 10px; border-radius: 12px;">
+        <!--💚-->
+      </div>
 
-            <div class="post">
-                <h2>11 de abril de 2025</h2>
-                <p>Cada día que te puedo ver, es una oportunidad más para entregarte cuanto puedo de mí, hagamos esto juntos...</p>
-            </div>
+      <div class="post">
+        <h2>11 de abril de 2025</h2>
+        <p>Cada día que te puedo ver, es una oportunidad más para entregarte cuanto puedo de mí, hagamos esto juntos...</p>
+      </div>
 
-            <div class="post">
-                <h2>12 de abril de 2025</h2>
-                <p><strong>Ya es hora de cambiarlas, ¿no?</strong> Dime cuál te gusta más 💕</p>
+      <div class="post">
+        <h2>12 de abril de 2025</h2>
+        <p><strong>Ya es hora de cambiarlas, ¿no?</strong> Dime cuál te gusta más 💕</p>
 
-                <!-- Combo 1 -->
-                <div>
-                    <p class="message">¿Prefieres algo sencillo, tierno y casual?</p>
-                    <button onclick="mostrarCombo(1)">Ver Combo 1 🐾</button>
-                    <div id="combo1" class="image-pair hidden">
-                        <img src="images/Izquierda1-1.png" alt="Combo 1 - Izquierda">
-                        <img src="images/Derecha1-1.png" alt="Combo 1 - Derecha">
-                    </div>
-                </div>
-
-                <!-- Combo 2 -->
-                <div style="margin-top: 25px;">
-                    <p class="message">¿Quizá algo colorido?</p>
-                    <button onclick="mostrarCombo(2)">Ver Combo 2 🎨</button>
-                    <div id="combo2" class="image-pair hidden">
-                        <img src="images/Izquierda2-2.jpg" alt="Combo 2 - Izquierda">
-                        <img src="images/Derecha2-2.jpg" alt="Combo 2 - Derecha">
-                    </div>
-                </div>
-
-                <!-- Combo 3 -->
-                <div style="margin-top: 25px;">
-                    <p class="message">¿Qué tal algo más relacionado con nosotros?</p>
-                    <button onclick="mostrarCombo(3)">Ver Combo 3 💑</button>
-                    <div id="combo3" class="image-pair hidden">
-                        <img src="images/Izquierda3-3.png" alt="Combo 3 - Izquierda">
-                        <img src="images/Derecha3-3.png" alt="Combo 3 - Derecha">
-                    </div>
-                </div>
-            </div>
+        <!-- Combo 1 -->
+        <div>
+          <p class="message">¿Prefieres algo sencillo, tierno y casual?</p>
+          <button onclick="mostrarCombo(1)">Ver Combo 1 🐾</button>
+          <div id="combo1" class="image-pair hidden">
+            <img src="images/Izquierda1-1.png" alt="Combo 1 - Izquierda">
+            <img src="images/Derecha1-1.png" alt="Combo 1 - Derecha">
+          </div>
         </div>
+
+        <!-- Combo 2 -->
+        <div style="margin-top: 25px;">
+          <p class="message">¿Quizá algo colorido?</p>
+          <button onclick="mostrarCombo(2)">Ver Combo 2 🎨</button>
+          <div id="combo2" class="image-pair hidden">
+            <img src="images/Izquierda2-2.jpg" alt="Combo 2 - Izquierda">
+            <img src="images/Derecha2-2.jpg" alt="Combo 2 - Derecha">
+          </div>
+        </div>
+
+        <!-- Combo 3 -->
+        <div style="margin-top: 25px;">
+          <p class="message">¿Qué tal algo más relacionado con nosotros?</p>
+          <button onclick="mostrarCombo(3)">Ver Combo 3 💑</button>
+          <div id="combo3" class="image-pair hidden">
+            <img src="images/Izquierda3-3.png" alt="Combo 3 - Izquierda">
+            <img src="images/Derecha3-3.png" alt="Combo 3 - Derecha">
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <script>
-        const passwordCorrecta = "awadelimon";
+  <script>
+    const passwordCorrecta = "awadelimon";
 
-        function checkPassword() {
-            const input = document.getElementById("passwordInput").value;
-            const error = document.getElementById("error-message");
-            if (input === passwordCorrecta) {
-                document.getElementById("login-container").style.display = "none";
-                document.getElementById("content").classList.remove("hidden");
-            } else {
-                error.classList.remove("hidden");
-            }
-        }
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value;
+      const error = document.getElementById("error-message");
+      if (input === passwordCorrecta) {
+        document.getElementById("login-container").style.display = "none";
+        document.getElementById("content").classList.remove("hidden");
+      } else {
+        error.classList.remove("hidden");
+      }
+    }
 
-        function mostrarCombo(numero) {
-            for (let i = 1; i <= 3; i++) {
-                document.getElementById(`combo${i}`).classList.add("hidden");
-            }
-            document.getElementById(`combo${numero}`).classList.remove("hidden");
-        }
-    </script>
+    function mostrarCombo(numero) {
+      for (let i = 1; i <= 3; i++) {
+        document.getElementById(`combo${i}`).classList.add("hidden");
+      }
+      document.getElementById(`combo${numero}`).classList.remove("hidden");
+    }
+
+    function revealText() {
+      const texto = "Más que mil palabras... si no entiendes revisa el código de la página.";
+      const textoContainer = document.getElementById("reveal-text");
+      textoContainer.classList.remove("hidden");
+      textoContainer.textContent = "";
+      let i = 0;
+      const intervalo = setInterval(() => {
+        textoContainer.textContent += texto[i];
+        i++;
+        if (i >= texto.length) clearInterval(intervalo);
+      }, 50);
+    }
+  </script>
 </body>
 </html>
