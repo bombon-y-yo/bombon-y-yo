@@ -24,7 +24,7 @@
         button {
             padding: 8px 16px;
             font-size: 16px;
-            margin-left: 10px;
+            margin-top: 10px;
             background-color: #ff88aa;
             border: none;
             color: white;
@@ -34,6 +34,32 @@
 
         #error-message {
             color: red;
+            margin-top: 10px;
+        }
+
+        .post {
+            margin-top: 30px;
+            background: #fff0f5;
+            padding: 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 8px rgba(255, 136, 170, 0.2);
+        }
+
+        .image-pair {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .image-pair img {
+            max-width: 40%;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .message {
+            font-style: italic;
             margin-top: 10px;
         }
     </style>
@@ -83,10 +109,42 @@
 
             <div class="post">
                 <h2>11 de abril de 2025</h2>
-                <button onclick="revealLetter()" style="padding: 10px 20px; background-color: #ff88aa; color: white; border: none; border-radius: 10px; cursor: pointer;">
-                    Toca para leer algo bonito 💌
-                </button>
-                <p id="typed-text" style="margin-top: 20px; white-space: pre-line; font-family: 'Courier New', monospace; font-size: 18px;"></p>
+                <p>Cada día que te puedo ver, es una oportunidad más para entregarte cuanto puedo de mí, hagamos esto juntos...</p>
+            </div>
+
+            <div class="post">
+                <h2>12 de abril de 2025</h2>
+                <p><strong>Ya es hora de cambiarlas, ¿no?</strong> Dime cuál te gusta más 💕</p>
+
+                <!-- Combo 1 -->
+                <div>
+                    <p class="message">¿Prefieres algo sencillo, tierno y casual?</p>
+                    <button onclick="mostrarCombo(1)">Ver Combo 1 🐾</button>
+                    <div id="combo1" class="image-pair hidden">
+                        <img src="images/Izquierda1-1.png" alt="Combo 1 - Izquierda">
+                        <img src="images/Derecha1-1.png" alt="Combo 1 - Derecha">
+                    </div>
+                </div>
+
+                <!-- Combo 2 -->
+                <div style="margin-top: 25px;">
+                    <p class="message">¿Quizá algo colorido?</p>
+                    <button onclick="mostrarCombo(2)">Ver Combo 2 🎨</button>
+                    <div id="combo2" class="image-pair hidden">
+                        <img src="images/Izquierda2-2.jpg" alt="Combo 2 - Izquierda">
+                        <img src="images/Derecha2-2.jpg" alt="Combo 2 - Derecha">
+                    </div>
+                </div>
+
+                <!-- Combo 3 -->
+                <div style="margin-top: 25px;">
+                    <p class="message">¿Qué tal algo más relacionado con nosotros?</p>
+                    <button onclick="mostrarCombo(3)">Ver Combo 3 💑</button>
+                    <div id="combo3" class="image-pair hidden">
+                        <img src="images/Izquierda3-3.png" alt="Combo 3 - Izquierda">
+                        <img src="images/Derecha3-3.png" alt="Combo 3 - Derecha">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -105,25 +163,11 @@
             }
         }
 
-        function revealLetter() {
-            const text = `Cada día que te puedo ver, es una oportunidad más para entregarte cuanto puedo de mí.
-
-Hagamos esto juntos... 💖`;
-
-            let i = 0;
-            const speed = 40; // velocidad de escritura
-            const typedTextElement = document.getElementById("typed-text");
-            typedTextElement.innerHTML = "";
-
-            function typeWriter() {
-                if (i < text.length) {
-                    typedTextElement.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, speed);
-                }
+        function mostrarCombo(numero) {
+            for (let i = 1; i <= 3; i++) {
+                document.getElementById(`combo${i}`).classList.add("hidden");
             }
-
-            typeWriter();
+            document.getElementById(`combo${numero}`).classList.remove("hidden");
         }
     </script>
 </body>
