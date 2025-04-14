@@ -63,8 +63,7 @@
       margin-top: 10px;
     }
 
-    #reveal-text11,
-    #reveal-text13 {
+    #reveal-text11 {
       white-space: pre-line;
       margin-top: 15px;
     }
@@ -150,13 +149,6 @@
         </div>
       </div>
 
-      <div class="post">
-        <h2>13 de abril de 2025</h2>
-        <p>Hoy quiero dejarte un mensajito escondido. Toca para verlo, es especial 💗</p>
-        <button onclick="revealText13()">Descubrir mensaje secreto 💫</button>
-        <p id="reveal-text13" class="hidden"></p>
-      </div>
-
     </div>
   </div>
 
@@ -184,19 +176,6 @@
         contenedor.textContent += texto[i];
         i++;
         if (i >= texto.length) clearInterval(intervalo);
-      }, 50);
-    }
-
-    function revealText13() {
-      const mensaje = "Si supieras todo lo que me inspiras… Podría escribir mil líneas sobre ti y ninguna alcanzaría.";
-      const contenedor = document.getElementById("reveal-text13");
-      contenedor.classList.remove("hidden");
-      contenedor.textContent = "";
-      let i = 0;
-      const intervalo = setInterval(() => {
-        contenedor.textContent += mensaje[i];
-        i++;
-        if (i >= mensaje.length) clearInterval(intervalo);
       }, 50);
     }
   </script>
